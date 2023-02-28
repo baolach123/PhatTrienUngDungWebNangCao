@@ -1,0 +1,17 @@
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Services.deps.json
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Services.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Services.pdb
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Core.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Data.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Core.pdb
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\bin\Debug\net6.0\TatBlog.Data.pdb
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.csproj.AssemblyReference.cache
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.AssemblyInfoInputs.cache
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.AssemblyInfo.cs
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.csproj.CoreCompileInputs.cache
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.csproj.CopyComplete
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\refint\TatBlog.Services.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\TatBlog.Services.pdb
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Services\obj\Debug\net6.0\ref\TatBlog.Services.dll

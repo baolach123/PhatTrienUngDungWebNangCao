@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TatBlog.Core.Contracts
+namespace TatBlog.Core.Contracts;
+
+public interface IEntity
 {
-    internal interface IEntity
-    {
-    }
+    int Id { get; set; }
 }

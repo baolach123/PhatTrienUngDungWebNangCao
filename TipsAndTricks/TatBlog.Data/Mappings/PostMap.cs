@@ -63,7 +63,7 @@ namespace TatBlog.Data.Mappings
             builder.HasOne(x => x.Author)
                 .WithMany(c => c.Posts)
                 .HasForeignKey(x => x.AuthorId)
-                .HasConstraintName("FK_Posts_Categories")
+                .HasConstraintName("FK_Posts_Authors")
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.Tags)
