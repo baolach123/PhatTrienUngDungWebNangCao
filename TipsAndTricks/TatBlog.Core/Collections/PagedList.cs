@@ -34,7 +34,7 @@ namespace TatBlog.Core.Collections
             set => PageIndex = value-1;
         }
 
-        public int PageCount
+        public int PagedCount
         {
             get
             {
@@ -48,11 +48,11 @@ namespace TatBlog.Core.Collections
         }
 
         public bool HasPreviousPage => PageIndex > 0;
-        public bool HasNextPage => (PageIndex < (PageCount-1));
+        public bool HasNextPage => (PageIndex < (PagedCount-1));
         public int FirstItemIndex => (PageIndex * PageSize) + 1;
         public int LastItemIndex => Math.Min(TotalItemCount,((PageIndex * PageSize) + PageSize));
         public bool IsFirstPage => (PageIndex <= 0);
-        public bool IsLastPage => (PageIndex >= (PageCount-1));
+        public bool IsLastPage => (PageIndex >= (PagedCount-1));
         #region IPagedList<T> Members
         public IEnumerator<T> GetEnumerator()
         {

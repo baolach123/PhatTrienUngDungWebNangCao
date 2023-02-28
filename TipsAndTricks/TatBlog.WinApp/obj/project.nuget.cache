@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jLIfaSjp4mxcP2QuZaQrb+WRqwZXtFYF/3ALCcLWvmxVQ7CXZ6XLQ4DDOAB0k57t6TQnCKQgCOKzXO3UBVOnDA==",
+  "dgSpecHash": "X52hY5LUArgHn5UtEOPE1Fn+mFzt25xVfUozcRRl8yGd2xQoyaJ6DseM0hGBAYXOiIoukD+v/Vp+PWSn17qm/A==",
   "success": true,
   "projectFilePath": "C:\\Du\\WShop\\PTUDWeb_NangCao\\PhatTrienUngDungWebNangCao\\TipsAndTricks\\TatBlog.WinApp\\TatBlog.WinApp.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Users\\acer\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\system.linq.dynamic.core\\1.2.25\\system.linq.dynamic.core.1.2.25.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

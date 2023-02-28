@@ -6,7 +6,7 @@ using TatBlog.Services.Blogs;
 
 
 
-
+#region FirstRun
 //var seeder=new DataSeeder(context);
 
 //seeder.Initialize();
@@ -21,12 +21,10 @@ using TatBlog.Services.Blogs;
 //    Console.WriteLine(  "{0,-4}{1,-30}{2,-30}{3,12:MM/dd/yyyy}",
 //        author.Id, author.FullName, author.Email, author.JoinedDate);
 //}
+#endregion
 
 
-
-
-
-
+#region SecondRun
 //var context = new BlogDbContext();
 //var posts = context.Posts
 //    .Where (x => x.Published)
@@ -52,9 +50,10 @@ using TatBlog.Services.Blogs;
 //    Console.WriteLine("Category :{0}", post.Category);
 //    Console.WriteLine("".PadRight(80,'-'));
 //}
+#endregion
 
 
-
+#region ThirdRun
 //var context = new BlogDbContext();
 
 //IBlogRepository blogRepo = new BlogRepository(context);
@@ -71,8 +70,9 @@ using TatBlog.Services.Blogs;
 //    Console.WriteLine("Category :{0}", post.Category.Name);
 //    Console.WriteLine("".PadRight(80,'-'));
 //}
+#endregion
 
-
+#region FourthRun
 var context = new BlogDbContext();
 
 IBlogRepository blogRepo = new BlogRepository(context);
@@ -87,3 +87,4 @@ foreach (var item in categories)
     Console.WriteLine("{0,-5}{1,-50}{2,10}",
         item.Id, item.Name, item.PostCount);
 }
+#endregion
