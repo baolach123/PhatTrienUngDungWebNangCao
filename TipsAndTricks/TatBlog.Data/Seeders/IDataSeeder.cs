@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TatBlog.Data.Seeders
 {
-    internal interface IDataSeeder
+    public interface IDataSeeder
     {
+        void Initialize();
     }
 }
