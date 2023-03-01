@@ -75,3 +75,4 @@ C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.Win
 C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.WinApp\obj\Debug\net6.0\TatBlog.WinApp.pdb
 C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.WinApp\obj\Debug\net6.0\TatBlog.WinApp.genruntimeconfig.cache
 C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.WinApp\obj\Debug\net6.0\ref\TatBlog.WinApp.dll
+C:\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\TipsAndTricks\TatBlog.WinApp\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
