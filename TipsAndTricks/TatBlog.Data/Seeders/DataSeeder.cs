@@ -22,13 +22,16 @@ namespace TatBlog.Data.Seeders
         {
             _dbContext.Database.EnsureCreated();
 
-            if (_dbContext.Posts.Any()) return;
+            //if (_dbContext.Posts.Any()) return;
             var authors = AddAuthors();
             var categories = AddCategories();
             var tags = AddTags();
             var posts = AddPosts(authors, categories, tags);
         }
 
+
+
+        // Nhap thong tin tac gia
         private IList<Author> AddAuthors()
         {
             var authors = new List<Author>()
@@ -46,12 +49,29 @@ namespace TatBlog.Data.Seeders
                     UrlSlug = "Jessica-wonder",
                     Email = "jessica665@motip.com",
                     JoinedDate = new DateTime(2020, 4, 19)
+                },
+                new()
+                {
+                    FullName = "BuiVanDu",
+                    UrlSlug = "Bui-Van-Du",
+                    Email = "buivandu2002@gmail.com",
+                    JoinedDate = new DateTime(2023, 3, 2)
                 }
             };
-            _dbContext.Author.AddRange(authors);
+            //add vao db
+            foreach (var author in authors)
+            {
+                if (!_dbContext.Author.Any(a => a.UrlSlug == author.UrlSlug))
+                    _dbContext.Author.Add(author);
+            }
+           // _dbContext.Author.AddRange(authors);
             _dbContext.SaveChanges();
             return authors;
         }
+
+
+
+        //nhap thong tin category
         private IList<Category> AddCategories() {
             var categories = new List<Category>()
         {
@@ -59,14 +79,23 @@ namespace TatBlog.Data.Seeders
             new(){Name="Architecture", Description="Architecture", UrlSlug="Architecture"},
             new(){Name="Messaging", Description="Messaging", UrlSlug="Messaging"},
             new(){Name="OOP", Description="Object-Oriented Programing", UrlSlug="OOP"},
-            new(){Name="Design Patterns", Description="Design Patterns", UrlSlug="DesignPatterns"}
+            new(){Name="Design Patterns", Description="Design Patterns", UrlSlug="DesignPatterns"},
+            new(){Name="DuInfo", Description="Information Of Du", UrlSlug="PersonalInformationOfDu"}
 
         };
-            _dbContext.AddRange(categories);
+            foreach (var category in categories)
+            {
+                if (!_dbContext.Categoties.Any(a => a.UrlSlug == category.UrlSlug))
+                    _dbContext.Categoties.Add(category);
+            }
+            //_dbContext.AddRange(categories);
             _dbContext.SaveChanges();
             return categories;
         
         }
+
+
+        //nhap thong tin tag
         private IList<Tag> AddTags() {
             var tags = new List<Tag>()
         {
@@ -75,13 +104,30 @@ namespace TatBlog.Data.Seeders
             new(){Name="Razor Page", Description="Razor Page",UrlSlug="ADuRazorPage"},
             new(){Name="Blazor", Description="Blazor",UrlSlug="ADuBlazor"},
             new(){Name="Deep Learning", Description="Deep Learning",UrlSlug="ADuDeepLearning"},
-            new(){Name="Neural Network", Description="Neural Network",UrlSlug="ADuNeuralNetwork"}
+            new(){Name="Neural Network", Description="Neural Network",UrlSlug="ADuNeuralNetwork"},
+            new(){Name="BuiVanDu", Description="BuiVanDu", UrlSlug="ADuBuiVanDu"}
+
+
         };
-            _dbContext.AddRange(tags);
+
+            foreach (var tag in tags)
+            {
+                if (!_dbContext.Tags.Any(t => t.UrlSlug == tag.UrlSlug))
+                {  
+                    _dbContext.Tags.Add(tag);
+                }
+            }
+
+            //_dbContext.AddRange(tags);
             _dbContext.SaveChanges();
             return tags;
                 
         }
+
+
+
+
+        //nhap thong tin post
         private IList<Post> AddPosts(
               IList<Author> authors,
               IList<Category> Categories,
@@ -106,9 +152,31 @@ namespace TatBlog.Data.Seeders
             {
                 tags[0]
             }
+            },
+            new(){
+            Title ="Anh du qua la dep trai",
+            ShortDescription="Du 20 tuoi, cao 1m66, nang 1 ta 1",
+            Description="Tai sao cuoc doi co the san sinh ra duoc mot nguoi dep trai nhu Du",
+            Meta="Cai nay thi khong hieu de lam gi",
+            UrlSlug="buivandu-cdvt-vippro123",
+            Published=true,
+            PostedDate=new DateTime(2023, 3, 2, 17, 9, 20),
+            ModifiedDate=null,
+            ViewCount=10,
+            Author=authors[0],
+            Category = Categories[0],
+            Tags= new List<Tag>()
+            {
+                tags[6]
+            }
             }
         };
-            _dbContext.AddRange(posts); 
+            foreach ( var post in posts )
+            {
+                if(!_dbContext.Posts.Any(p=>p.UrlSlug==post.UrlSlug))
+                    _dbContext.Posts.Add(post);
+            }
+           // _dbContext.AddRange(posts); 
             _dbContext.SaveChanges();
             return posts;
         }

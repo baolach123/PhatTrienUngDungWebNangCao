@@ -125,4 +125,30 @@ public class BlogRepository : IBlogRepository
         return await tagQuery
             .ToPagedListAsync(pagingParams, cancellationToken);
     }
+
+    public async Task<Tag> SeekTagWithUrlslugAync(string slugTag, CancellationToken cancellationToken = default)
+    {
+        return await _context.Set<Tag>()
+            .Where(x=>x.UrlSlug== slugTag)
+            .FirstOrDefaultAsync(cancellationToken);
+    }
+
+    public async Task<IList<TagItem>> GetListTagAndAmountOfPostInTagAsync(CancellationToken cancellationToken = default)
+    {
+        var listTag = _context.Set<Tag>()
+            .Select(t => new TagItem()
+            {               
+                Name = t.Name,               
+                PostCount=t.posts.Count()
+            });
+        return await listTag
+            .ToListAsync(cancellationToken);
+    }
+
+    public async Task<Category> SeekCategoryAsync(string slugCategory, CancellationToken cancellationToken = default)
+    {
+        return await _context.Set<Category>()
+            .Where(x=>x.UrlSlug == slugCategory)
+            .FirstOrDefaultAsync (cancellationToken);
+    }
 }

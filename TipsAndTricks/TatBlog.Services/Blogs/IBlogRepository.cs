@@ -22,22 +22,34 @@ namespace TatBlog.Services.Blogs
 
         Task<IList<Post>> GetPopularArticlesAsync(
             int numPosts,
-            CancellationToken cancellationToken= default);
+            CancellationToken cancellationToken = default);
 
         Task<bool> IsPostSlugExixtedAsync(
             int postID, string slug,
-            CancellationToken cancellationToken=default);
+            CancellationToken cancellationToken = default);
 
         Task IncreaseViewCountAsync(
             int postId,
             CancellationToken cancellationToken = default);
-            
+
         Task<IList<CategoryItem>> GetCategoriesAsync(
-            bool showOnMenu=false,
-            CancellationToken cancellationToken=default);
+            bool showOnMenu = false,
+            CancellationToken cancellationToken = default);
 
         Task<IPagedList<TagItem>> GetPagedTagsAsync(
             IPagingParams pagingParams,
             CancellationToken cancellationToken = default);
+
+        Task<Tag> SeekTagWithUrlslugAync(
+            string slugTag,
+            CancellationToken cancellationToken = default);    
+        
+        Task<IList<TagItem>> GetListTagAndAmountOfPostInTagAsync(
+            CancellationToken cancellationToken = default);
+
+        Task<Category> SeekCategoryAsync(
+            string slugCategory,
+            CancellationToken cancellationToken = default);
+            
     }
 }
