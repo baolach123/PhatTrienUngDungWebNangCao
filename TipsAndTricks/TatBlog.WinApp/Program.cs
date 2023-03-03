@@ -6,6 +6,18 @@ using TatBlog.Services.Blogs;
 using TatBlog.WinApp;
 
 
+//namespace TatBlog.WinApp
+//{
+//    public class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//        }
+//    }
+//}
+
+
 
 #region FirstRun
 //var seeder=new DataSeeder(context);
@@ -96,17 +108,17 @@ var context = new BlogDbContext();
 
 IBlogRepository blogRepo = new BlogRepository(context);
 
-DataSeeder seeder = new DataSeeder(context);
+//DataSeeder seeder = new DataSeeder(context);
 
-seeder.Initialize();
+//seeder.Initialize();
 
-var pagingParams = new PagingParams
-{
-    PageNumber = 1,
-    PageSize = 5,
-    SortColumn = "Name",
-    SortOrder = "DESC"
-};
+//var pagingParams = new PagingParams
+//{
+//    PageNumber = 1,
+//    PageSize = 5,
+//    SortColumn = "Name",
+//    SortOrder = "DESC"
+//};
 
 //var tagsList = await blogRepo.GetPagedTagsAsync(pagingParams);
 //Console.WriteLine("{0,-5}{1,-50}{2,-10}",
