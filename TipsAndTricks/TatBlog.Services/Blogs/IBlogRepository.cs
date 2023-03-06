@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TatBlog.Core.Contracts;
 using TatBlog.Core.DTO;
 using TatBlog.Core.Entities;
+using TatBlog.Core.Constants;
 using TatBlog.Core.Collections;
 
 
@@ -59,8 +60,32 @@ namespace TatBlog.Services.Blogs
             int Id,
             CancellationToken cancellationToken = default);
 
-        Task AddOrUpdateCategoryAsysn(
+        Task AddOrUpdateCategoryAsysc(
             Category category, CancellationToken cancellationToken = default);
-            
+
+        Task RemoveCategoryByIdAsync(
+            int Id, CancellationToken cancellationToken = default);
+
+        Task CheckExistCategoryAsync(Category category,
+    CancellationToken cancellationToken = default);
+
+
+        Task<IPagedList<CategoryItem>> GetPagingCategoryAsync(IPagingParams pagingParams,
+        CancellationToken cancellationToken = default);
+
+
+        Task<Post> SeekPostByIdAsync(
+            int id,
+            CancellationToken cancellationToken = default);
+
+        Task AddOrUpdatePostAsysc(Post postt, CancellationToken cancellationToken = default);
+
+        Task ChangeStatusPublishAsync(int postId, CancellationToken cancellationToken=default);
+
+        Task<IList<Post>> GetRandomNPostAsync(int n, CancellationToken cancellationToken = default);
+
+        Task<IList<Post>> SeekAllPostAsync(PostQuery postQuery, CancellationToken cancellationToken = default);
+
+        Task<int> CountNumberPostAsync(PostQuery postQuery, CancellationToken cancellationToken = default);
     }
 }

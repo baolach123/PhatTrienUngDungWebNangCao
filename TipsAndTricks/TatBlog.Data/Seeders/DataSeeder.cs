@@ -163,13 +163,30 @@ namespace TatBlog.Data.Seeders
             PostedDate=new DateTime(2023, 3, 2, 17, 9, 20),
             ModifiedDate=null,
             ViewCount=10,
-            Author=authors[0],
+            Author=authors[2],
             Category = Categories[0],
             Tags= new List<Tag>()
             {
                 tags[6]
             }
+            },
+             new(){
+            Title ="Google qwertyuiio",
+            ShortDescription="shienshisha",
+            Description="Decreofasfisha",
+            Meta="Deltaable",
+            UrlSlug="abc-123-asd-jkl",
+            Published=true,
+            PostedDate=new DateTime(2022, 10, 20, 8, 3, 0),
+            ModifiedDate=null,
+            ViewCount=5,
+            Author=authors[2],
+            Category = Categories[1],
+            Tags= new List<Tag>()
+            {
+                tags[6]
             }
+            },
         };
             foreach ( var post in posts )
             {
