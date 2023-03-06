@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Menu
 {
-    internal class Program
+    internal class Menu
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

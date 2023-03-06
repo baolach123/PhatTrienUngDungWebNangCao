@@ -72,6 +72,16 @@ public class BlogRepository : IBlogRepository
             
     }
 
+
+    public async Task<bool> IsCategorySlugExixtedAsync(
+    int categoryId, string slug,
+    CancellationToken cancellationToken = default)
+    {
+        return await _context.Set<Post>()
+            .AnyAsync(x => x.Id != categoryId && x.UrlSlug == slug, cancellationToken);
+
+    }
+
     public async Task IncreaseViewCountAsync(
         int postId,
         CancellationToken cancellationToken = default)
@@ -150,5 +160,38 @@ public class BlogRepository : IBlogRepository
         return await _context.Set<Category>()
             .Where(x=>x.UrlSlug == slugCategory)
             .FirstOrDefaultAsync (cancellationToken);
+    }
+
+    public async Task<Category> SeekCategoryByIdAsync(int categoryId, CancellationToken cancellation = default)
+    {
+        return await _context.Set<Category>()
+            .Where(x => x.Id == categoryId)
+            .FirstOrDefaultAsync(cancellation);
+    }
+
+    public async Task RemoveTagByIdAsync(int Id, CancellationToken cancellationToken = default)
+    {
+        _context.Database.ExecuteSqlRawAsync("DELETE FROM PostTags WHERE TagsId = "+Id);
+    }
+
+    public async Task AddOrUpdateCategoryAsysn(Category category, CancellationToken cancellationToken = default)
+    {
+        if (IsCategorySlugExixtedAsync(category.Id, category.UrlSlug).Result)
+        { Console.WriteLine("da ton tai"); }
+        else if (category.Id > 0)
+        {
+            await _context.Set<Category>()
+                .Where(x => x.Id == category.Id)
+                .ExecuteUpdateAsync(c => c
+                    .SetProperty(a=>a.Name, category.Name)
+                    .SetProperty(a=>a.Description, category.Description)
+                    .SetProperty(a=>a.ShowOnMenu,category.ShowOnMenu)
+                    .SetProperty(a=>a.Posts, category.Posts), cancellationToken);
+        }
+        else
+        {
+            _context.Categoties.Add(category);
+            _context.SaveChanges();
+        }
     }
 }

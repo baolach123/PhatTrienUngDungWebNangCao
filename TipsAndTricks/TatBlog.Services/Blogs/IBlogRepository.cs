@@ -50,6 +50,17 @@ namespace TatBlog.Services.Blogs
         Task<Category> SeekCategoryAsync(
             string slugCategory,
             CancellationToken cancellationToken = default);
+
+        Task<Category> SeekCategoryByIdAsync(
+            int categoryId,
+            CancellationToken cancellation = default);
+
+        Task RemoveTagByIdAsync(
+            int Id,
+            CancellationToken cancellationToken = default);
+
+        Task AddOrUpdateCategoryAsysn(
+            Category category, CancellationToken cancellationToken = default);
             
     }
 }

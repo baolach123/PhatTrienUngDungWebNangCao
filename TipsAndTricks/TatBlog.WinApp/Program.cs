@@ -6,16 +6,26 @@ using TatBlog.Services.Blogs;
 using TatBlog.WinApp;
 
 
-//namespace TatBlog.WinApp
-//{
-//    public class Program
-//    {
-//        static void Main(string[] args)
-//        {
 
-//        }
-//    }
-//}
+
+namespace TatBlog.WinApp
+{
+    public class Program
+    {
+        static  void Main(string[] args)
+        {
+            Menu menu = new Menu();
+            menu.XuatMenu();
+            int n;
+            do
+            {
+               n= menu.ChonMenu();
+               menu.XyLyMenu(n);
+            } while (n >= 0 || n < 20);
+            
+        }
+    }
+}
 
 
 
@@ -104,9 +114,9 @@ using TatBlog.WinApp;
 
 #region Fifth Run
 
-var context = new BlogDbContext();
+//var context = new BlogDbContext();
 
-IBlogRepository blogRepo = new BlogRepository(context);
+//IBlogRepository blogRepo = new BlogRepository(context);
 
 //DataSeeder seeder = new DataSeeder(context);
 
@@ -143,8 +153,8 @@ IBlogRepository blogRepo = new BlogRepository(context);
 //    Console.WriteLine("{0,-50}{1,-3}", tag.Name, tag.PostCount);
 //}
 
-var category = await blogRepo.SeekCategoryAsync("NETCore");
-Console.WriteLine(category.Name+"");
+//var category = await blogRepo.SeekCategoryAsync("NETCore");
+//Console.WriteLine(category.Name+"");
 
 #endregion
 
