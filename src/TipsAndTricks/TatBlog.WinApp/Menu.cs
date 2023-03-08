@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Threading.Channels;
 using TatBlog.Core.Constants;
+using TatBlog.Core.Contracts;
 using TatBlog.Core.Entities;
 using TatBlog.Data.Contexts;
 using TatBlog.Data.Seeders;
@@ -16,6 +18,7 @@ namespace TatBlog.WinApp
         {
             Console.WriteLine("---------Menu--------");
             Console.WriteLine("0.Thoat");
+            Console.WriteLine("Phan I: ");
             Console.WriteLine("1.Tim mot the theo ten dind danh");
             Console.WriteLine("2.Lay tat ca cac the kem theo so bai viet chua the do");
             Console.WriteLine("3.Xoa mot ma the cho truoc");
@@ -31,6 +34,14 @@ namespace TatBlog.WinApp
             Console.WriteLine("13.Chuyen doi trang thai publish cua bai viet");
             Console.WriteLine("14.Tim tat ca bai viet thoa man dieu kien");
             Console.WriteLine("15.Dem so luong bai viet thoa man dieu kien");
+            Console.WriteLine("16.Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<Post>");
+            Console.WriteLine("17.Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<T>");
+            Console.WriteLine("Phan II:");
+            Console.WriteLine("18.Tim mot tac gia theo ma so");
+            Console.WriteLine("19.Tim mot tac gia theo ten dinh danh");
+            Console.WriteLine("20.Lấy và phân trang danh sách tác giả kèm theo số lượng bài viết của tác giả đó. Kết quả trả về kiểu IPagedList<AuthorItem>");
+            Console.WriteLine("21.Thêm hoặc cập nhật thông tin một tác giả. ");
+            Console.WriteLine("22. Tìm danh sách N tác giả có nhiều bài viết nhất. N là tham số đầu vào");
         }
 
         public int ChonMenu()
@@ -115,9 +126,10 @@ namespace TatBlog.WinApp
                     {
                         PageNumber = 1,
                         PageSize = 5,
-                        SortColumn = "name",
-                        SortOrder = "desc"
+                        SortColumn = "Id",
+                        SortOrder = "Asc"
                     };
+                     
 
                     var categoryPage = await blogRepo.GetPagingCategoryAsync(pagingParams);
                     Console.WriteLine("{0,-5}{1,-50}{2,10}","Id","Name","Count");
@@ -186,6 +198,33 @@ namespace TatBlog.WinApp
                     };
                     int count = await blogRepo.CountNumberPostAsync(query1);
                     Console.WriteLine(count);
+                    break;
+
+                case 16:
+                    Console.WriteLine("Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<Post>");                   
+                    var pagingParams1 = new PagingParams()
+                    {
+                        PageNumber = 1,
+                        PageSize = 5,
+                        SortColumn = "Id",
+                        SortOrder = "Desc"
+                    };
+                    PostQuery query2 = new PostQuery()
+                    {
+                        PostId = 2
+                    };
+                    await blogRepo.SeekPagingPostAsync(query2, pagingParams1);
+                    var categoryPaged = await blogRepo.GetPagingCategoryAsync(pagingParams1);
+                    Console.WriteLine("{0,-5}{1,-50}{2,10}", "Id", "Name", "Count");
+
+                    foreach (var item in categoryPaged)
+                    {
+                        Console.WriteLine("{0,-5}{1,-50}{2,10}", item.Id, item.Name, item.PostCount);
+                    }
+                    break;
+
+                case 17:
+                    Console.WriteLine("Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<T>");
                     break;
             }
         }
