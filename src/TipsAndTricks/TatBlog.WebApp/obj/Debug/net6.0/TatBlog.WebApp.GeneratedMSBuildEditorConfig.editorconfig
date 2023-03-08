@@ -16,16 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\acer\Du\WShop\PTUDWeb_NangCao\PhatTrienUngDungWebNangCao\src\TipsAndTricks\TatBlog.WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Blog/About.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QmxvZ1xBYm91dC5jc2h0bWw=
+[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Views/Blog/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Blog/Contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QmxvZ1xDb250YWN0LmNzaHRtbA==
+[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Views/Blog/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Blog/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QmxvZ1xJbmRleC5jc2h0bWw=
+[C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/acer/Du/WShop/PTUDWeb_NangCao/PhatTrienUngDungWebNangCao/src/TipsAndTricks/TatBlog.WebApp/Views/Shared/_Header.cshtml]

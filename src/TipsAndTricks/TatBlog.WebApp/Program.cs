@@ -23,5 +23,6 @@ var app = builder.Build();
     app.UseRouting();
     app.MapControllerRoute(name: "default",
         pattern: "{controller=Blog}/{action=Index}/{id?}");
-
 }
+
+app.Run();
