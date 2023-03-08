@@ -20,9 +20,16 @@ namespace TatBlog.Data.Contexts
         public DbSet<Tag> Tags { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-IHERN55O;Initial Catalog=TatBlog;Integrated Security=True;TrustServerCertificate=true;MultipleActiveResultSets=true;");
+        //}
+
+        public BlogDbContext(DbContextOptions<BlogDbContext> options)
+            : base(options) { }
+
+        public BlogDbContext()
         {
-            optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-IHERN55O;Initial Catalog=TatBlog;Integrated Security=True;TrustServerCertificate=true;MultipleActiveResultSets=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

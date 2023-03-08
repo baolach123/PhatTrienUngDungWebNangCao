@@ -334,4 +334,25 @@ public class BlogRepository : IBlogRepository
             .WhereIf(!string.IsNullOrWhiteSpace(postQuery.TagSlug), p => p.Tags.Any(x => x.UrlSlug == postQuery.TagSlug))
             .ToPagedListAsync(pagingParams, cancellationToken);
     }
+
+    public async Task<IPagedList<Post>> GetPagedPostsAsync(
+        PostQuery postQuery,
+        int pageNumber=1,
+        int pageSize=1,
+        CancellationToken cancellationToken = default)
+    {
+        return await _context.Set<Post>()
+           .Include(c => c.Category)
+           .Include(c => c.Tags)
+           .Include(c=>c.Author)
+           .WhereIf(postQuery.AuthorId > 0, p => p.AuthorId == postQuery.AuthorId)
+           .WhereIf(postQuery.PostId > 0, p => p.Id == postQuery.PostId)
+           .WhereIf(postQuery.CategoryId > 0, p => p.CategotyId == postQuery.CategoryId)
+           .WhereIf(!string.IsNullOrWhiteSpace(postQuery.CategorySlug), p => p.Category.UrlSlug == postQuery.CategorySlug)
+           .WhereIf(postQuery.PostedYear > 0, p => p.PostedDate.Year == postQuery.PostedYear)
+           .WhereIf(postQuery.PostedMonth > 0, p => p.PostedDate.Month == postQuery.PostedMonth)
+           .WhereIf(postQuery.TagId > 0, p => p.Tags.Any(x => x.Id == postQuery.TagId))
+           .WhereIf(!string.IsNullOrWhiteSpace(postQuery.TagSlug), p => p.Tags.Any(x => x.UrlSlug == postQuery.TagSlug))
+           .ToPagedListAsync(pageNumber, pageSize, nameof(Post.PostedDate),"DESC",cancellationToken);
+    }
 }

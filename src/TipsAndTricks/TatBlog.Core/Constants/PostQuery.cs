@@ -14,10 +14,13 @@ namespace TatBlog.Core.Constants
         public int PostId { get; set; }
         public int CategoryId { get; set; }
         public string CategorySlug { get; set; }
+        public string AuthorSlug { get; set; }
         public int PostedYear { get; set; }
         public int PostedMonth { get; set; }
         public string TagSlug { get; set; }
         public int TagId { get; set; }
+        public bool PublishedOnly { get; set; }
         public IList<Tag> Tags { get; set; }
+        public string KeyWord { get; set; }
     }
 }

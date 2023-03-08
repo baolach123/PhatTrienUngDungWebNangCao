@@ -95,5 +95,11 @@ namespace TatBlog.Services.Blogs
 
         Task<IPagedList<Post>> SeekPagingPostAsync(PostQuery postQuery,
             IPagingParams pagingParams, CancellationToken cancellationToken=default);
+
+        Task<IPagedList<Post>> GetPagedPostsAsync(
+        PostQuery postQuery,
+        int pageNumber = 1,
+        int pageSize = 1,
+        CancellationToken cancellationToken = default);
     }
 }

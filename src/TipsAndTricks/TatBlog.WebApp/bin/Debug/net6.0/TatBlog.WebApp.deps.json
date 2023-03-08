@@ -10,7 +10,8 @@
         "dependencies": {
           "TatBlog.Core": "1.0.0",
           "TatBlog.Data": "1.0.0",
-          "TatBlog.Services": "1.0.0"
+          "TatBlog.Services": "1.0.0",
+          "TatBlog.WinApp": "1.0.0"
         },
         "runtime": {
           "TatBlog.WebApp.dll": {}
@@ -644,6 +645,16 @@
         "runtime": {
           "TatBlog.Services.dll": {}
         }
+      },
+      "TatBlog.WinApp/1.0.0": {
+        "dependencies": {
+          "TatBlog.Core": "1.0.0",
+          "TatBlog.Data": "1.0.0",
+          "TatBlog.Services": "1.0.0"
+        },
+        "runtime": {
+          "TatBlog.WinApp.dll": {}
+        }
       }
     }
   },
@@ -1105,6 +1116,11 @@
       "sha512": ""
     },
     "TatBlog.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TatBlog.WinApp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

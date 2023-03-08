@@ -46,10 +46,10 @@ namespace TatBlog.WinApp
 
         public int ChonMenu()
         {
-            
+
             Console.WriteLine("Chon chuc nang:");
             int n = Convert.ToInt32(Console.ReadLine());
-            return n;            
+            return n;
         }
 
         public async void XyLyMenu(int n)
@@ -129,14 +129,14 @@ namespace TatBlog.WinApp
                         SortColumn = "Id",
                         SortOrder = "Asc"
                     };
-                     
+
 
                     var categoryPage = await blogRepo.GetPagingCategoryAsync(pagingParams);
-                    Console.WriteLine("{0,-5}{1,-50}{2,10}","Id","Name","Count");
+                    Console.WriteLine("{0,-5}{1,-50}{2,10}", "Id", "Name", "Count");
 
-                    foreach(var item in categoryPage)
+                    foreach (var item in categoryPage)
                     {
-                       Console.WriteLine("{0,-5}{1,-50}{2,10}",item.Id, item.Name, item.PostCount);
+                        Console.WriteLine("{0,-5}{1,-50}{2,10}", item.Id, item.Name, item.PostCount);
                     }
                     break;
 
@@ -167,7 +167,7 @@ namespace TatBlog.WinApp
                         ViewCount = 15,
                         Author = new(),
                         Category = new(),
-                        Tags = new List<Tag>()                                             
+                        Tags = new List<Tag>()
                     };
                     await blogRepo.AddOrUpdatePostAsysc(post);
                     break;
@@ -181,12 +181,12 @@ namespace TatBlog.WinApp
                     Console.WriteLine("Tim tat ca bai viet thoa man dieu kien");
                     PostQuery query = new PostQuery()
                     {
-                        PostId = 2                     
+                        PostId = 2
                     };
                     var listPosts = await blogRepo.SeekAllPostAsync(query);
-                    foreach(var item in listPosts)
+                    foreach (var item in listPosts)
                     {
-                        Console.WriteLine(item.Title+"");
+                        Console.WriteLine(item.Title + "");
                     }
                     break;
 
@@ -201,7 +201,7 @@ namespace TatBlog.WinApp
                     break;
 
                 case 16:
-                    Console.WriteLine("Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<Post>");                   
+                    Console.WriteLine("Tim va phan trang bai viet thoa man dieu kien PostQuery tra ve IPagedList<Post>");
                     var pagingParams1 = new PagingParams()
                     {
                         PageNumber = 1,

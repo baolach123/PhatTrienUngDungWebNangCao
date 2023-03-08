@@ -12,7 +12,7 @@ namespace TatBlog.WinApp
 {
     public class Program
     {
-        static  void Main(string[] args)
+        static void Main(string[] args)
         {
             var context = new BlogDbContext();
             var seeder = new DataSeeder(context);
@@ -22,18 +22,18 @@ namespace TatBlog.WinApp
             int n;
             do
             {
-               n= menu.ChonMenu();
-               menu.XyLyMenu(n);
+                n = menu.ChonMenu();
+                menu.XyLyMenu(n);
             } while (n > 0 && n < 20);
-            
+
         }
     }
 }
 
 
 
-#region FirstRun
-//var seeder=new DataSeeder(context);
+//#region FirstRun
+//var seeder = new DataSeeder(context);
 //var context = new BlogDbContext();
 
 
@@ -46,40 +46,40 @@ namespace TatBlog.WinApp
 
 //foreach (var author in authors)
 //{
-//    Console.WriteLine(  "{0,-4}{1,-30}{2,-30}{3,12:MM/dd/yyyy}",
+//    Console.WriteLine("{0,-4}{1,-30}{2,-30}{3,12:MM/dd/yyyy}",
 //        author.Id, author.FullName, author.Email, author.JoinedDate);
 //}
-#endregion
+//#endregion
 
-#region SecondRun
+//#region SecondRun
 //var context = new BlogDbContext();
 //var posts = context.Posts
-//    .Where (x => x.Published)
-//    .OrderBy (x => x.Title)
+//    .Where(x => x.Published)
+//    .OrderBy(x => x.Title)
 //    .Select(p => new
 //    {
-//        Id=p.Id,
-//        Title =p.Title,
+//        Id = p.Id,
+//        Title = p.Title,
 //        ViewCount = p.ViewCount,
-//        PostedDate =p.PostedDate,
-//        Author =p.Author.FullName,
-//        Category =p.Category.Name,
+//        PostedDate = p.PostedDate,
+//        Author = p.Author.FullName,
+//        Category = p.Category.Name,
 //    })
-//    .ToList ();
+//    .ToList();
 
 //foreach (var post in posts)
 //{
-//    Console.WriteLine("ID       :{0}",post.Id);
-//    Console.WriteLine("Title    :{0}",post.Title);
-//    Console.WriteLine("View     :{0}",post.ViewCount);
+//    Console.WriteLine("ID       :{0}", post.Id);
+//    Console.WriteLine("Title    :{0}", post.Title);
+//    Console.WriteLine("View     :{0}", post.ViewCount);
 //    Console.WriteLine("Date     :{0}:MM/dd/yyyy", post.PostedDate);
 //    Console.WriteLine("Author   :{0}", post.Author);
 //    Console.WriteLine("Category :{0}", post.Category);
-//    Console.WriteLine("".PadRight(80,'-'));
+//    Console.WriteLine("".PadRight(80, '-'));
 //}
-#endregion
+//#endregion
 
-#region ThirdRun
+//#region ThirdRun
 //var context = new BlogDbContext();
 
 //IBlogRepository blogRepo = new BlogRepository(context);
@@ -88,17 +88,17 @@ namespace TatBlog.WinApp
 
 //foreach (var post in posts)
 //{
-//    Console.WriteLine("ID       :{0}",post.Id);
-//    Console.WriteLine("Title    :{0}",post.Title);
-//    Console.WriteLine("View     :{0}",post.ViewCount);
+//    Console.WriteLine("ID       :{0}", post.Id);
+//    Console.WriteLine("Title    :{0}", post.Title);
+//    Console.WriteLine("View     :{0}", post.ViewCount);
 //    Console.WriteLine("Date     :{0}:MM/dd/yyyy", post.PostedDate);
 //    Console.WriteLine("Author   :{0}", post.Author.FullName);
 //    Console.WriteLine("Category :{0}", post.Category.Name);
-//    Console.WriteLine("".PadRight(80,'-'));
+//    Console.WriteLine("".PadRight(80, '-'));
 //}
-#endregion
+//#endregion
 
-#region FourthRun
+//#region FourthRun
 //var context = new BlogDbContext();
 
 //IBlogRepository blogRepo = new BlogRepository(context);
@@ -113,9 +113,9 @@ namespace TatBlog.WinApp
 //    Console.WriteLine("{0,-5}{1,-50}{2,10}",
 //        item.Id, item.Name, item.PostCount);
 //}
-#endregion
+//#endregion
 
-#region Fifth Run
+//#region Fifth Run
 
 //var context = new BlogDbContext();
 
@@ -135,7 +135,7 @@ namespace TatBlog.WinApp
 
 //var tagsList = await blogRepo.GetPagedTagsAsync(pagingParams);
 //Console.WriteLine("{0,-5}{1,-50}{2,-10}",
-//"ID","Name","Count");
+//"ID", "Name", "Count");
 
 
 //foreach (var item in tagsList)
@@ -146,7 +146,7 @@ namespace TatBlog.WinApp
 
 
 //var tagf = await blogRepo.SeekTagWithUrlslugAync("ADuGoogle");
-//Console.WriteLine(tagf.Name+"");
+//Console.WriteLine(tagf.Name + "");
 
 
 
@@ -157,7 +157,7 @@ namespace TatBlog.WinApp
 //}
 
 //var category = await blogRepo.SeekCategoryAsync("NETCore");
-//Console.WriteLine(category.Name+"");
+//Console.WriteLine(category.Name + "");
 
-#endregion
+//#endregion
 
